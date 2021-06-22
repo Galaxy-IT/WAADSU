@@ -1,0 +1,107 @@
+
+
+@mixin transition($element) {
+  transition: $element .3s ease;
+}
+
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+// Max breakpoint
+$pc: 1920; // width layout for PC version
+$tablet: 992; // width layout tablet version
+$mob: 320; // width layout mobile version
+
+//vwInit
+$vwInit:true;
+
+// Function
+//@function vw($target, $digits:2) {
+//  $n: 1;
+//  @for $i from 1 through $digits {
+//    $n: $n * 10; // how point after
+//  }
+//  @return round($target/(($pc * .01) * 1px) * $n) / $n * 1vw;
+//}
+//
+//@function dvw($target, $digits:2) {
+//  $n: 1;
+//  @for $i from 1 through $digits {
+//    $n: $n * 10; // how point after
+//  }
+//  @return round($target/(($desktop * .01) * 1px) * $n) / $n * 1vw;
+//}
+//
+//@function mvw($target, $digits:2) {
+//  $n: 1;
+//  @for $i from 1 through $digits {
+//    $n: $n * 10; // how point after
+//  }
+//  @return round($target/(($mob * .01) * 1px) * $n) / $n * 1vw;
+//}
+
+@function px($size){
+  @if $vwInit == true {
+    @return decimal-round((($size / $pc) * 100), 2)+vw
+  } @else  {
+    @return floor(($size))+px
+  }
+}
+
+@function pxm($size){
+  @if $vwInit == true {
+    @return decimal-round((($size / $tablet) * 100), 2)+vw
+  } @else  {
+    @return floor(($size))+px
+  }
+}
+
+/**
+  function VA => use for calculate letter-spacing from photoshop
+  ## letter-spacing: VA(120, 14)
+
+  $unit => VA value in photoshop
+  $base => how px font-size in photoshop
+  $return px | em
+ */
+@function VA($unit, $base: '16', $return: 'px') { // letter spacing from photoshop
+  @if $return == 'em' {
+    @return unquote((($unit) / 1000) + 'em');
+  } @else {
+    @return unquote((($unit * $base) / 1000) + 'px');
+  }
+}
+
+//Decimal-round
+@function decimal-round ($number, $digits: 0, $mode: round) {
+  $n: 1;
+  // $number must be a number
+  @if type-of($number) != number {
+    @warn '#{ $number } is not a number.';
+    @return $number;
+  }
+  // $digits must be a unitless number
+  @if type-of($digits) != number {
+    @warn '#{ $digits } is not a number.';
+    @return $number;
+  } @else if not unitless($digits) {
+    @warn '#{ $digits } has a unit.';
+    @return $number;
+  }
+  @for $i from 1 through $digits {
+    $n: $n * 10;
+  }
+  @if $mode == round {
+    @return round($number * $n) / $n;
+  } @else if $mode == ceil {
+    @return ceil($number * $n) / $n;
+  } @else if $mode == floor {
+    @return floor($number * $n) / $n;
+  } @else {
+    @warn '#{ $mode } is undefined keyword.';
+    @return $number;
+  }
+}
+

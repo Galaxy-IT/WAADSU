@@ -1,0 +1,32 @@
+header.header
+    .header-wrapper 
+        .header-content 
+            a(href="#" class = 'header-logo') 
+                img(src = '../static/img/svg/logo.svg' alt = 'header-logo')
+            a(href="#" class = 'header-logo__text') 
+                img(src = '../static/img/svg/logo-text.svg' alt = 'header-logo')
+            nav.header-nav
+                ul.header-menu 
+                    li.header-menu__item 
+                        a(href = '#' class = 'header-menu__link') Главная
+                    li.header-menu__item 
+                        a(href = '#' class = 'header-menu__link') Ходокам
+                    li.header-menu__item 
+                        a(href = '#' class = 'header-menu__link') Рекламодателям
+                    li.header-menu__item 
+                        a(href = '#' class = 'header-menu__link') Партнерам
+                    li.header-menu__item 
+                        a(href = '#' class = 'header-menu__link') Контакты
+            a(href = '#' class = 'header-login') 
+                span Войти
+            .header-select.select 
+                .header-select__value.select__trigger
+                    img(src = '../static/img/svg/lang-eu.svg' class = 'header-select__icon')
+                    .header-select__container
+                        span RU
+                        +icon('select-arrow','header-select__arrow')
+                .header-select__dropdown.select__dropdown
+                    span.header__select__dropdown-item EU 
+                    span.header__select__dropdown-item UA
+
+            

@@ -1,0 +1,183 @@
+.about-us {
+    padding-top: 80px;
+
+    &__hero {
+        width: 100%;
+        max-width: 1310px;
+        padding: 0 15px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 350px;
+    }
+
+    &__left {
+        position: relative;
+        margin-right: 40px;
+
+    }
+
+    &__left-container {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        height: 575px;
+        max-width: 570px;
+
+        img {
+            border-radius: 15px;
+        }
+    }
+
+    &__trifle {
+        position: absolute;
+        z-index: 2;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &1 {
+            background-image: url('../img/content/about-us/about-us-trifle1.png');
+            top: 95px;
+            right: -40px;
+            width: 82px;
+            height: 93px;
+        }
+
+        &2 {
+            background-image: url('../img/content/about-us/about-us-trifle2.png');
+            bottom: -40px;
+            left: -12%;
+            width: 178px;
+            height: 189px;
+        }
+
+        &3 {
+            background-image: url('../img/content/about-us/about-us-trifle3.png');
+            top: 28px;
+            left: -6%;
+            width: 92px;
+            height: 113px;
+        }
+    }
+
+    &__right {
+        width: 675px;
+    }
+
+    &__quotes {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('../img/content/about-us/about-us-hero-quotes.png');
+        width: 100px;
+        height: 78px;
+        margin-bottom: 40px;
+    }
+
+    &__right-text {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.15;
+
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+    }
+
+    //team
+
+    &__team {
+        margin-bottom: 230px;
+    }
+
+    &__team-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__team-title {
+        margin-bottom: 15px;
+    }
+
+    &__team-subtitle {
+        font-family: $openSans;
+        color: $fontGray;
+        text-align: center;
+        max-width: 750px;
+        font-size: 15px;
+        margin-bottom: 50px;
+        letter-spacing: .5px;
+        line-height: 28px;
+    }
+
+    &__team-list {
+        display: flex;
+        flex-wrap: wrap;
+        // align-items: center;
+    }
+
+    &__team-item {
+        width: 270px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:not(:nth-child(4n)) {
+            margin-right: 30px;
+        }
+
+        &:not(:nth-last-child(-n+4)) {
+            margin-bottom: 70px;
+        }
+
+
+
+    }
+
+    &__team_empty {
+        .about__team-item__top {
+            background-color: #3056D3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                fill: #fff;
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+
+}
+
+.about__team-item__top {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.about__team-item__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__team-item__name {
+    font-family: $montserrat;
+    font-weight: 500;
+    font-size: 24px;
+    color: $fontBlack;
+    margin-bottom: 7px;
+}
+
+.about__team-item__post {
+    font-family: $openSans;
+    font-size: 12px;
+    color: $fontGray;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
