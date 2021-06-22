@@ -66,9 +66,12 @@ section {
 
 input,
 select,
-
 textarea {
   outline: none !important;
+  border: none;
+}
+input{
+  background: transparent;
   border: none;
 }
 button {
@@ -114,6 +117,32 @@ img{
   font-family: $montserrat;
   font-size: 48px;
   font-weight: 600;
+}
+.default__form-title{
+  font-family: $montserrat;
+  font-size: 38px;
+  color: #fff;
+  line-height: 64px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+.default__form-button{
+  background-color: #13C296;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  span{
+font-family: $montserrat;
+font-weight: 500;
+font-size: 16px;
+letter-spacing: .5px;
+color: #fff;
+  }
 }
 .icon-select-arrow{
   transition: .3s linear;

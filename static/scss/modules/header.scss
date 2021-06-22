@@ -164,8 +164,11 @@
     position: absolute;
     top: 32px;
     left: 34px;
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
+    span{
+      display: block;
+    }
     
   }
 }

@@ -1,4 +1,57 @@
 footer.footer
     .custom-wrapper
-        .footer__content
+        .footer-content
+            .footer-info
+                a(href = '#' class = 'footer-info__logo')
+                    img(src = '../static/img/svg/footer-logo.svg' class = 'footer-info__logo-icon')
+                .footer-info__adress
+                    p Россия, Москва
+                    span тел: 
+                    a(href = 'tel:+79777814390' class = 'footer-info__phone') +7 (977) 781-43-90
+                ul.footer-info__social 
+                    li.footer-info__social-item.footer-info__social-item_instagram
+                        a.footer-info__social-link(href="#") 
+                            +icon('instagram','footer-info__social-icon')
+                    li.footer-info__social-item.footer-info__social-item_facebook 
+                        a.footer-info__social-link(href="#") 
+                            +icon('facebook','footer-info__social-icon')
+                    li.footer-info__social-item.footer-info__social-item_vk 
+                        a.footer-info__social-link(href="#") 
+                            +icon('vk','footer-info__social-icon')
+                    li.footer-info__social-item.footer-info__social-item_youtube 
+                        a.footer-info__social-link(href="#") 
+                            +icon('youtube','footer-info__social-icon')
+                    li.footer-info__social-item.footer-info__social-item_telegram 
+                        a.footer-info__social-link(href="#") 
+                            +icon('telegram','footer-info__social-icon')
+                    li.footer-info__social-item.footer-info__social-item_whatsup 
+                        a.footer-info__social-link(href="#") 
+                            +icon('whatsup','footer-info__social-icon')
+            nav.footer-nav
+                ul.footer-menu 
+                    li.footer-menu__item Изучи 
+                    li.footer-menu__item 
+                        a(href="#" class='footer-menu__link')  О нас
+                    li.footer-menu__item 
+                        a(href="#" class='footer-menu__link')  Контакты
+
+                    li.footer-menu__item 
+                        a(href="#" class='footer-menu__link')  Форум
+
+             
+            ul.footer-documentation 
+                li.footer-documentation__item Документы 
+                li.footer-documentation__item 
+                    a(href="#" class='footer-documentation__link')  Сертификаты
+                li.footer-documentation__item 
+                    a(href="#" class='footer-documentation__link')  Политика 
+            .footer-subscribe
+                h4.footer-subscribe__heading Подпишись
+                p.footer-subscribe__subtitle В нашем телеграм-канале &nbsp все актуальные новости
+                
+                form(action ='#' class = 'footer-subscribe__form')
+                    .footer-subscribe__item 
+                        input(type = 'email' placeholder = "Enter email Address")
+                        button.footer-subscribe__button 
+                            +icon('footer-subscribe-send')
 

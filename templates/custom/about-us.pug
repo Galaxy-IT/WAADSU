@@ -96,3 +96,17 @@
                         .about__team-item__bottom 
                             span.about__team-item__name Gorokh Alexandr 
                             span.about__team-item__post Head of Project Management
+    .about-us__new
+        .about-us__new-content 
+            h2.default__form-title.about-us__new-title Мы всегда рады новым специалистам. Если хочешь делать мир лучше, расскажи нам о себе.
+            form(action = '#').about-us__new-form
+                .about-us__new-item 
+                    input(type = 'text' placeholder = 'Имя' )
+                .about-us__new-item 
+                    input(type = 'number' placeholder = 'Hомер' )
+                .about-us__new-item.margin__right_zero
+                    input(type = 'text' placeholder = 'Ссылка на резюме, соц. сети' )
+                .about-us__new-item.about-us__new-item_big
+                    input(type = 'email' placeholder = 'Электронная почта' )
+                button.default__form-button.about-us__new-button
+                    span Отправить
