@@ -121,6 +121,15 @@ window.addEventListener('click', (e) => {
     }
 })
 
+//burger
+let burger = document.querySelector('.header-burger');
+let navigation = document.querySelector('.header-nav');
+burger && burger.addEventListener('click', function () {
+  this.classList.toggle('opened');
+  this.setAttribute('aria-expanded', this.classList.contains('opened'));
+  navigation.classList.toggle('opened_nav');
+  document.body.classList.toggle('overflow');
+});
 
 
 

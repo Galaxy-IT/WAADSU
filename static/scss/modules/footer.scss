@@ -1,10 +1,16 @@
 .footer {
     padding: 100px 0;
     background-color: #090E34;
-
+    @media(max-width:992px){
+        padding: 60px 0;
+    }
     &-content {
         display: flex;
         justify-content: space-between;
+        @media(max-width:992px){
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &-info {
@@ -12,11 +18,16 @@
         display: flex;
         flex-direction: column;
         margin-right: 60px;
+        @media(max-width:992px){
+            width: 290px;
+            align-items: center;
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
     }
 
     &-info__logo {
         width: 135px;
-
         margin-bottom: 30px;
     }
 
@@ -26,9 +37,14 @@
         font-size: 18px;
         letter-spacing: 0.5px;
         margin-bottom: 20px;
+        
 
         p {
             margin-bottom: 15px;
+            @media(max-width:992px){
+                text-align: center;
+
+            }
 
         }
 
@@ -114,10 +130,19 @@
     &-nav,
     &-documentation {
         width: 170px;
+        @media(max-width:992px){
+            width: 290px;
+            margin-bottom: 30px;
+            margin-right: 0;
+        }
     }
 
     &-nav {
         margin-right: 30px;
+        @media(max-width:992px){
+            margin-right: 0;
+        }
+        
     }
 
     &-menu {
@@ -137,6 +162,10 @@
             color: #fff;
             margin-bottom: 25px;
         }
+        @media(max-width:992px){
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &-menu__link {
@@ -153,6 +182,10 @@
 
     &-documentation {
         margin-right: 100px;
+        @media(max-width:992px){
+            margin-right: 0;
+        }
+        
     }
 
     &-documentation__item {
@@ -165,6 +198,10 @@
             font-weight: 500;
             color: #fff;
             margin-bottom: 25px;
+        }
+        @media(max-width:992px){
+            display: flex;
+            justify-content: center;
         }
     }
 
@@ -182,6 +219,9 @@
 
     &-subscribe {
         width: 280px;
+        @media(max-width:992px){
+            width: 290px;
+        }
     }
 
     &-subscribe__heading {
@@ -189,6 +229,9 @@
         font-weight: 500;
         color: #fff;
         margin-bottom: 25px;
+        @media(max-width:992px){
+            text-align: center;
+        }
 
     }
 
@@ -199,6 +242,12 @@
         font-size: 18px;
         letter-spacing: 0.5px;
         margin-bottom: 20px;
+        @media(max-width:992px){
+            text-align: center;
+            max-width: 270px;
+            margin: 0 auto 20px;
+
+        }
     }
 
     &-subscribe__form {
@@ -220,7 +269,7 @@
 
             letter-spacing: 0.5px;
 
-            color: #707C8C;
+            color: #fff;
 
             &::placeholder {
                 font-size: 14px;
